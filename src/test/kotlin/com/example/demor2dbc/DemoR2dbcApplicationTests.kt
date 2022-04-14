@@ -8,6 +8,8 @@ import org.springframework.test.context.ContextConfiguration
 @SpringBootTest
 class DemoR2dbcApplicationTests {
 
+
+
 	@Test
 	fun contextLoads() {
 	}

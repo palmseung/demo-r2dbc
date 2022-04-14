@@ -5,6 +5,8 @@ plugins {
 	id("io.spring.dependency-management") version "1.0.11.RELEASE"
 	kotlin("jvm") version "1.6.10"
 	kotlin("plugin.spring") version "1.6.10"
+	id ("org.jetbrains.kotlin.plugin.noarg") version "1.6.10"
+	id ("org.jetbrains.kotlin.plugin.allopen") version "1.6.10"
 }
 
 group = "com.example"
@@ -29,9 +31,13 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
+	implementation("org.jetbrains.kotlin:kotlin-noarg")
+	implementation("org.jetbrains.kotlin:kotlin-allopen")
+	implementation("org.jetbrains.kotlin:kotlin-gradle-plugin")
 	implementation("org.springframework.cloud:spring-cloud-starter-circuitbreaker-reactor-resilience4j")
 	implementation("io.r2dbc:r2dbc-h2")
 	implementation ("io.github.microutils:kotlin-logging-jvm:2.1.20")
+	implementation("com.infobip:infobip-spring-data-r2dbc-querydsl-boot-starter:6.1.2")
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("io.projectreactor:reactor-test")
@@ -41,6 +47,10 @@ dependencyManagement {
 	imports {
 		mavenBom("org.springframework.cloud:spring-cloud-dependencies:${property("springCloudVersion")}")
 	}
+}
+
+sourceSets["main"].withConvention(org.jetbrains.kotlin.gradle.plugin.KotlinSourceSet::class) {
+	kotlin.srcDir("$buildDir/generated/source/kapt/main")
 }
 
 tasks.withType<KotlinCompile> {
