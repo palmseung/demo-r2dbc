@@ -37,7 +37,7 @@ dependencies {
 	implementation("org.springframework.cloud:spring-cloud-starter-circuitbreaker-reactor-resilience4j")
 	implementation("io.r2dbc:r2dbc-h2")
 	implementation ("io.github.microutils:kotlin-logging-jvm:2.1.20")
-	implementation("com.infobip:infobip-spring-data-r2dbc-querydsl-boot-starter:6.1.2")
+//	implementation("com.infobip:infobip-spring-data-r2dbc-querydsl-boot-starter:6.1.2")
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("io.projectreactor:reactor-test")

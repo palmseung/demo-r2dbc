@@ -31,4 +31,16 @@ class AccountRepositoryTest {
         }
 
     }
+
+    @Test
+    fun test2() {
+        runBlocking {
+            accountRepository.save(Account(name = "nameeee", age = 10)).awaitSingle()
+            accountRepository.save(Account(name = "nameeee", age = 30)).awaitSingle()
+            accountRepository.save(Account(name = "nameeee3", age = 250)).awaitSingle()
+
+            val sumOfAge = accountRepository.getSumOfAge()
+            println("sumOfAge = ${sumOfAge}")
+        }
+    }
 }

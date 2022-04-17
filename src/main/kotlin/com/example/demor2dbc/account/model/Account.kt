@@ -11,6 +11,8 @@ data class Account(
 
     var name: String? = null,
 
+    var age: Long? = 0,
+
     var active: Boolean = false,
 
     var createdAt: LocalDateTime = LocalDateTime.now(),
