@@ -6,3 +6,8 @@
 
 webclient:
   h2-console-port: 8081
+
+server:
+  port: 15500
+
+
