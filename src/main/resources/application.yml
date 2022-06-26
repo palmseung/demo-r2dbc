@@ -10,4 +10,12 @@ webclient:
 server:
   port: 15500
 
+#spring:
+#  datasource:
+#    hikari:
+#      data-source-class-name: oracle
+#  r2dbc:
+#    url: r2dbc:oracle://localhost:1521/xe
+#    username: system
+#    password: oracle
 

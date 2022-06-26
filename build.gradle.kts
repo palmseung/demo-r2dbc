@@ -32,6 +32,8 @@ dependencies {
 	implementation("org.springframework.cloud:spring-cloud-starter-circuitbreaker-reactor-resilience4j")
 	implementation("io.r2dbc:r2dbc-h2")
 	implementation ("io.github.microutils:kotlin-logging-jvm:2.1.20")
+	implementation("com.oracle.database.r2dbc:oracle-r2dbc:0.4.0")
+	implementation("io.r2dbc:r2dbc-pool:1.0.0.RC1")
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("io.projectreactor:reactor-test")
